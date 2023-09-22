@@ -9,6 +9,6 @@ async function bootstrap() {
     methods: "GET,PUT,POST,DELETE,UPDATE,OPTIONS",
     credentials: true,
   });
-  await app.listen(process.env.PORT);
+  await app.listen(process.env.DATABASE_PORT);
 }
 bootstrap();

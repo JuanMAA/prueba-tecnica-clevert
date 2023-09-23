@@ -72,6 +72,12 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 Nest is [MIT licensed](LICENSE).
 
+## Deploy on Render
+
+The easiest way to deploy your application is by using the Render platform.
+
+For more details on how to deploy your application on Render, visit the [Render documentation](https://render.com/docs).
+
 ## Configuration of Environment Variables
 
 This project relies on specific environment variables for its configuration. Below, you'll find details on the necessary variables and their purposes:

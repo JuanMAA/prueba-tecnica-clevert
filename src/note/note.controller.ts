@@ -22,6 +22,11 @@ export class NotesController {
     return await this.notesService.create(createNoteDto);
   }
 
+  @Post('changeStatus/:id')
+  async changeStatus(@Param('id') id: number) {
+    return await this.notesService.changeStatus(id);
+  }
+
   @Put(':id')
   async update(@Param('id') id: number, @Body() updateNoteDto: UpdateNoteDto) {
     return await this.notesService.update(id, updateNoteDto);

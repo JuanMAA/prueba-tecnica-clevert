@@ -11,6 +11,9 @@ export class Note {
     @Column()
     content: string;
 
+    @Column({ default: true })
+    finished: boolean;
+
     @CreateDateColumn()
     createdAt: Date;
 

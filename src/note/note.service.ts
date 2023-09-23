@@ -17,10 +17,7 @@ export class NotesService {
   }
 
   async findOne(id: number): Promise<Note | undefined> {
-    return await this.noteRepository.findOne({
-      where: { id },
-      withDeleted: true
-    });
+    return await this.noteRepository.findOne({ where: { id } });
   }
 
   async create(createNoteDto: CreateNoteDto): Promise<Note> {
@@ -35,5 +32,10 @@ export class NotesService {
 
   async remove(id: number): Promise<void> {
     await this.noteRepository.softDelete(id);
+  }
+
+  async changeStatus(id: number): Promise<void> {
+    const note = await this.noteRepository.findOne({ where: { id } });
+    await this.noteRepository.update(id, { finished: !note.finished });
   }
 }

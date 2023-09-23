@@ -90,7 +90,7 @@ This project relies on specific environment variables for its configuration. Bel
 
 - `DATABASE_SYNCHRONIZE`: This boolean variable controls whether the database schema should be automatically synchronized with the application's entities. Set it to `true` to enable automatic synchronization.
 
-- `ORIGIN_CORS`: Describe the allowed origins for Cross-Origin Resource Sharing (CORS) in this variable. You can provide a description of the allowed websites or origins here, e.g., "Website enabled by CORS."
+- `ORIGIN_CORS`: Describe the allowed origins for Cross-Origin Resource Sharing (CORS) in this variable. You can provide a description of the allowed websites or origins here
 
 To configure these environment variables, follow these steps:
 

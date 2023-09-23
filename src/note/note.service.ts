@@ -17,7 +17,10 @@ export class NotesService {
   }
 
   async findOne(id: number): Promise<Note | undefined> {
-    return await this.noteRepository.findOne({ where: { id } });
+    return await this.noteRepository.findOne({
+      where: { id },
+      withDeleted: true
+    });
   }
 
   async create(createNoteDto: CreateNoteDto): Promise<Note> {

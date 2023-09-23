@@ -11,7 +11,7 @@ export class Note {
     @Column()
     content: string;
 
-    @Column({ default: true })
+    @Column({ default: false })
     finished: boolean;
 
     @CreateDateColumn()

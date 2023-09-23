@@ -31,6 +31,6 @@ export class NotesService {
   }
 
   async remove(id: number): Promise<void> {
-    await this.noteRepository.delete(id);
+    await this.noteRepository.softDelete(id);
   }
 }
